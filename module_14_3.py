@@ -86,13 +86,17 @@ async def get_formulas(call):
 @dp.message_handler(text="Купить")
 async def get_buying_list(message):
     with open("files/1.png", "rb") as img:
-        await message.answer_photo(img, f"Название: Product{1} | Описание: описание{1} | Цена: {1 * 100}")
+        await message.answer(f"Название: Product{1} | Описание: описание{1} | Цена: {1 * 100}")
+        await message.answer_photo(img)
     with open("files/2.png", "rb") as img:
-        await message.answer_photo(img, f"Название: Product{2} | Описание: описание{2} | Цена: {2 * 100}")
+        await message.answer(f"Название: Product{2} | Описание: описание{2} | Цена: {2 * 100}")
+        await message.answer_photo(img)
     with open("files/3.png", "rb") as img:
-        await message.answer_photo(img, f"Название: Product{3} | Описание: описание{3} | Цена: {3 * 100}")
+        await message.answer(f"Название: Product{3} | Описание: описание{3} | Цена: {3 * 100}")
+        await message.answer_photo(img)
     with open("files/4.png", "rb") as img:
-        await message.answer_photo(img, f"Название: Product{4} | Описание: описание{4} | Цена: {4 * 100}")
+        await message.answer(f"Название: Product{4} | Описание: описание{4} | Цена: {4 * 100}")
+        await message.answer_photo(img)
     await message.answer("Выберите продукт для покупки", reply_markup=kb_in_shop)
 
 

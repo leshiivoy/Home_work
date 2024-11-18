@@ -12,4 +12,4 @@ async def Get_Main_Page(user_id: int = Path(ge=1, le=100, description='Enter Use
 @app.get("/user/{username}/{age}")
 async def Get_Main_Page(username: str = Path(min_length=5, max_length=20,description='Enter username', example='Oleg')
                         , age: int = Path(ge=18, le=120, description='Enter age', example=55)) -> dict:
-    return {"message": f"Информация о пользователе. Имя: {username}, Возраст: {age}"}
+    return {"message": f"Информация о пользователе. Имя: {username}, Во зраст: {age}"}
